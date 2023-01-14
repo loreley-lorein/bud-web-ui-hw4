@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secret wagon</title>
+  </head>
+  <body>
+    <script>
+      const placeWagon = +prompt("Input your place in wagon");
+      let upDown = "Up";
+      let sideNot = "Not side";
+      let numberCoupe = Math.floor((placeWagon - 1) / 4 + 1);
+      if (placeWagon % 2) {
+        upDown = "Down";
+      }
+      if (placeWagon > 36) {
+        numberCoupe = Math.floor((54 - placeWagon) / 2 + 1);
+        sideNot = "Side";
+      }
+      alert(`You place ${upDown} and ${sideNot}`);
+    </script>
+  </body>
+</html>
